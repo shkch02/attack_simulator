@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: pod
+matadata: 
+  name: attacker-pod
+  labels:
+    app: attacker-label
+spec:
+  containers:
+  - name: attacker-container
+    image: shkch.duckdns.org/rule_engine/attacker:latest
+    imagePullPolicy: IfNotPresent
+    ports:
+    - containerPort: 8008
+ #필요하면 볼륨 마운트
+#    volumeMounts:
+#    -name: attacker-volume
+#     mountPath: /tmp/testpwd.txt
+#  volumes:
+#  - name: attacker-volume
+#    hostPath: /tmp/testpwd.txt  
