@@ -16,7 +16,8 @@ spec:
         app: attacker-label
     spec:
       imagePullSecrets:
-      - name: harbor-secret
+      - name: harbor-creds
+      serviceAccountName: admin-server-sa
       containers:
       - name: attacker-container
         image: shkch.duckdns.org/webserver/attacker:latest
