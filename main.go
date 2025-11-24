@@ -1,4 +1,5 @@
 //go run main.go
+//.
 
 package main
 
