@@ -49,7 +49,7 @@
             stage('Deploy to kubernetes') {
                 steps {
                     script{
-                        def localport = 8080
+                        def localport = 8888
                         def KUBECONFIG_PATH
                         def tunnelPid
                         def FULL_IMAGE_PATH = "${env.HARBOR_URL}/${env.HARBOR_PROJECT}/${env.IMAGE_NAME}:latest"
