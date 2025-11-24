@@ -24,4 +24,10 @@ spec:
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8008
+      volumes:
+      - name: attacker-volume
+        emptyDir: /tmp/testpwd.txt
+      volumeMounts:
+      - name: attacker-volume
+        mountPath: /tmp/testpwd.txt
     
