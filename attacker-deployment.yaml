@@ -20,7 +20,7 @@ spec:
       serviceAccountName: admin-server-sa
       containers:
       - name: attacker-container
-        image: shkch.duckdns.org/webserver/attacker:latest
+        image: "shkch.duckdns.org/webserver/attacker:latest"
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8008
