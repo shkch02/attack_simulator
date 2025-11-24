@@ -26,8 +26,8 @@ spec:
         - containerPort: 8008
       volumes:
       - name: attacker-volume
-        emptyDir: /tmp/testpwd.txt
+        emptyDir: "/tmp/testpwd.txt"
       volumeMounts:
       - name: attacker-volume
-        mountPath: /tmp/testpwd.txt
+        mountPath: "/tmp/testpwd.txt"
     
