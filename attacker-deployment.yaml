@@ -21,12 +21,7 @@ spec:
       containers:
       - name: attacker-container
         image: "shkch.duckdns.org/webserver/attacker:latest"
-        volumeMounts:
-        - name: attacker-volume
-          mountPath: /tmp/
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8008
-      volumes:
-      - name: attacker-volume
-        hostPath: /tmp/
+    
